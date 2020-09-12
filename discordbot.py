@@ -15,7 +15,6 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('pong')
-
+    await console.log('pong')
 
 bot.run(token)
