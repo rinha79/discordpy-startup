@@ -16,10 +16,14 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+    
 CHANNEL_ID = 696922604660850740
-async def on_message(message):
+async def greet():
     channel = client.get_channel(CHANNEL_ID)
-    await channel.send('てすとてすと')
+    await channel.send('てすと')
+@client.event
+async def on_ready():
+    await greet()
     
     
 @bot.event
