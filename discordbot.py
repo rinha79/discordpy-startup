@@ -20,8 +20,7 @@ async def ping(ctx):
 @bot.event
 async def on_message(message):
     if message.channel.id == 696922604660850740:
-        is_bot = " [BOT]"if message.author.bot else ""
-        print("{0.author}{is_bot}\n{0.content}".format(message,is_bot))
+        print("{0.author}{is_bot}\n{0.content}".format(message))
     
 
 bot.run(token)
