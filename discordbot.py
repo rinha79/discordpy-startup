@@ -16,7 +16,8 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
+
+@bot.event
 CHANNEL_ID = 696922604660850740
 async def greet():
     channel = client.get_channel(CHANNEL_ID)
