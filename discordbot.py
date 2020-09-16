@@ -5,7 +5,11 @@ import traceback
 bot = commands.Bot(command_prefix='r!!')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-
+@client.event
+async def on_ready():
+    channel = client.get_channel(696922604660850740)
+            await channel.send("Hello World!!")
+        
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
@@ -19,6 +23,18 @@ async def ping(ctx):
     
 async def test(ctx, arg):
     await ctx.send(arg)
+    
+async def joined(ctx, *, member: discord.Member):
+    await ctx.send('{0} joined on {0.joined_at}'.format(member))
+    
+async def is_owner(ctx):
+    return ctx.author.id == 5
+
+@bot.command(name='eval')
+@commands.check(is_owner)
+async def _eval(ctx, *, code):
+    """A bad example of an eval command"""
+    await ctx.send(eval(code))
     
 @bot.event
 async def on_message(message):
