@@ -3,6 +3,7 @@ import os
 import traceback
 
 bot = commands.Bot(command_prefix='r!!')
+client = discord.Client()
 token = os.environ['DISCORD_BOT_TOKEN']
 
 @client.event
