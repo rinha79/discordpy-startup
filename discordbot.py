@@ -47,3 +47,4 @@ async def on_message(message):
         print("{0.author}{1}\n{0.content}".format(message,is_bot))
 
 client.run(token)
+bot.run(token)
