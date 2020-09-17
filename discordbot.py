@@ -10,7 +10,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 @client.event
 async def on_ready():
     channel = client.get_channel(696922604660850740)
-    await channel.send("てst")
+    await channel.send("へっよ")
         
 @bot.event
 async def on_command_error(ctx, error):
@@ -47,4 +47,3 @@ async def on_message(message):
         print("{0.author}{1}\n{0.content}".format(message,is_bot))
 
 client.run(token)
-bot.run(token)
