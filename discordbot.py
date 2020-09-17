@@ -17,18 +17,20 @@ async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
-
-
+    
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
     
+@bot.command()
 async def test(ctx, arg):
     await ctx.send(arg)
     
+@bot.command()
 async def joined(ctx, *, member: discord.Member):
     await ctx.send('{0} joined on {0.joined_at}'.format(member))
-    
+ 
+@bot.command()
 async def is_owner(ctx):
     return ctx.author.id == 5
 
@@ -44,4 +46,4 @@ async def on_message(message):
         is_bot = " [BOT]"if message.author.bot else ""
         print("{0.author}{1}\n{0.content}".format(message,is_bot))
 
-bot.run(token)
+client.run(token)
