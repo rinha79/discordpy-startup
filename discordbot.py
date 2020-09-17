@@ -7,10 +7,10 @@ bot = commands.Bot(command_prefix='r!!')
 client = discord.Client()
 token = os.environ['DISCORD_BOT_TOKEN']
 
-@client.event
+@bot.event
 async def on_ready():
     channel = client.get_channel(696922604660850740)
-    await channel.send("へっよ")
+    await channel.send("おはやー！")
         
 @bot.event
 async def on_command_error(ctx, error):
@@ -46,4 +46,4 @@ async def on_message(message):
         is_bot = " [BOT]"if message.author.bot else ""
         print("{0.author}{1}\n{0.content}".format(message,is_bot))
 
-client.run(token)
+bot.run(token)
