@@ -7,10 +7,10 @@ bot = commands.Bot(command_prefix='r!!')
 client = discord.Client()
 token = os.environ['DISCORD_BOT_TOKEN']
 
-@bot.event
+@client.event
 async def on_ready():
     channel = client.get_channel(696922604660850740)
-    await channel.send("おはやー！")
+    await channel.send("owo")
         
 @bot.event
 async def on_command_error(ctx, error):
