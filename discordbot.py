@@ -1,13 +1,11 @@
 from discord.ext import commands
 import os
 import traceback
-import discord
 
 bot = commands.Bot(command_prefix='r!!')
-client = discord.Client()
 token = os.environ['DISCORD_BOT_TOKEN']
 
-@client.event
+@bot.event
 async def on_ready():
     channel = client.get_channel(696922604660850740)
     await channel.send("owo")
