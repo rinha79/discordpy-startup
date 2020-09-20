@@ -9,7 +9,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 @bot.event
 async def on_ready():
     channel = bot.get_channel(696922604660850740)
-    await channel.send("owo")
+    await channel.send("何故でしょう")
         
 @bot.event
 async def on_command_error(ctx, error):
@@ -20,11 +20,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
-@bot.command()
-async def test(ctx, arg):
-    await ctx.send(arg)
-    
+ 
 @bot.event
 async def on_message(message):
     if message.channel.id == 696922604660850740:
