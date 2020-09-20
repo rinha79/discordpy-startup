@@ -32,7 +32,7 @@ async def joined(ctx, *, member: discord.Member):
  
 @bot.command()
 async def is_owner(ctx):
-    return ctx.author.id == 5
+    return ctx.author.id == 567999794879135745
 
 @bot.command(name='eval')
 @commands.check(is_owner)
