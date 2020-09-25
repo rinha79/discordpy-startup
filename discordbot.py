@@ -10,7 +10,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 @bot.event
 async def on_ready():
     channel = bot.get_channel(696922604660850740)
-    await channel.send("::login")
+    await channel.send("よろでうs")
         
 @bot.event
 async def on_command_error(ctx, error):
