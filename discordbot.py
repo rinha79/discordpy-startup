@@ -10,7 +10,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 @bot.event
 async def on_ready():
     channel = bot.get_channel(696922604660850740)
-    await channel.send("よろでうs")
+    await channel.send(":eyes:")
         
 @bot.event
 async def on_command_error(ctx, error):
@@ -43,7 +43,7 @@ async def _eval(ctx, *, code):
 async def on_message(message):
     if message.channel.id == 696922604660850740:
         is_bot = " [BOT]"if message.author.bot else ""
-        print("{0.author}{1}\n{0.content}".format(message,is_bot))
+        print("{0.author}{1}|{0.author.id}\n{0.content}".format(message,is_bot))
     await bot.process_commands(message)
 
 bot.run(token)
