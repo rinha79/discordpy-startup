@@ -12,9 +12,9 @@ async def on_ready():
     channel = bot.get_channel(696922604660850740)
     await channel.send("owo")
     
+game = discord.Game("へろくきどうなう")    
 @bot.event
 async def on_ready():  
-game = discord.Game("へろくきどうなう")
 await client.change_presence(status=discord.Status.idle, activity=game)
 
         
