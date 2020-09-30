@@ -10,7 +10,14 @@ token = os.environ['DISCORD_BOT_TOKEN']
 @bot.event
 async def on_ready():
     channel = bot.get_channel(696922604660850740)
-    await channel.send(":eyes:")
+    await channel.send("owo")
+    
+@bot.event
+async def on_ready():  
+game = discord.Game("へろくきどうなう")
+await client.change_presence(status=discord.Status.idle, activity=game)
+
+        
         
 @bot.event
 async def on_command_error(ctx, error):
@@ -20,7 +27,7 @@ async def on_command_error(ctx, error):
     
 @bot.command()
 async def ping(ctx):
-    await ctx.send('pong')
+    await ctx.send('ぽんg')
     
 @bot.command()
 async def test(ctx, arg):
