@@ -35,7 +35,7 @@ async def on_message(message):
         date = datetime.datetime.now()
         hour = date.hour
         mnin = date.minute
-        print("{0.author}{1} ({0.author.id}) {0.str(hour)}時{0.str(mnin)}分\n{0.content}".format(message,is_bot))
+        print("{0.author}{1} ({0.author.id}) {str(hour)}時{str(mnin)}分\n{0.content}".format(message,is_bot))
     await bot.process_commands(message)
 
 bot.run(token)
