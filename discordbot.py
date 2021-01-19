@@ -32,7 +32,10 @@ async def joined(ctx, *, member: discord.Member):
 async def on_message(message):
     if message.channel.id == 696922604660850740:
         is_bot = " [BOT]"if message.author.bot else ""
-        print("{0.author}{1} ({0.author.id})\n{0.content}".format(message,is_bot))
+        date = datetime.datetime.now()
+hour = date.hour
+min = date.minute
+        print("{0.author}{1} ({0.author.id}) {0.str(hour)}時{0.str(min)}分\n{0.content}".format(message,is_bot))
     await bot.process_commands(message)
 
 bot.run(token)
